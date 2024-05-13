@@ -1,0 +1,28 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath libs.gradle // Use a version that matches your Android Studio version
+    }
+}
+
+plugins {
+    // Assuming 'libs.plugins.androidApplication' is defined in the settings.gradle or elsewhere
+    // If not, this needs to be specified differently or removed if causing issues.
+    // Example: id 'com.android.application' version '8.3.2' apply false
+    alias(libs.plugins.androidApplication) apply false
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+tasks.register('clean', Delete) {
+    delete rootProject.buildDir
+}

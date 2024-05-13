@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="CustomTextStyle" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">24sp</item> <!-- Bigger text size as you requested -->
+        <item name="android:textColor">?attr/colorOnBackground</item> <!-- Black color text -->
+        <item name="fontFamily">@font/montserrat_regular</item> <!-- Using Montserrat font -->
+    </style>
+
+</resources>
