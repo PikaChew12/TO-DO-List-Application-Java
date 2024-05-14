@@ -12,6 +12,6 @@
     <color name="taskItemText_light">#000000</color>
     <color name="taskItemText_dark">#FFFFFF</color>
     <color name="background_color_light">#FFFFFF</color> <!-- Light background color -->
-    <color name="background_color_dark">#101F41</color>
+    <color name="background_color_dark">#161C2D</color>
     <color name="lightblue">#ADD8E6</color>
 </resources>
