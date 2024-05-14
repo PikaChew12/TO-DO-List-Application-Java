@@ -3,6 +3,6 @@
     <attr name="viewPagerBackground" format="reference" />
     <attr name="colorOnBackground" format="reference" />
     <attr name="itemBackgroundColor" format="reference" />
-    <attr name="taskItemBackground" format="reference"/>
+    <attr name="taskItemBackground" format="color"/>
     <attr name="taskItemText" format="reference"/>
 </resources>

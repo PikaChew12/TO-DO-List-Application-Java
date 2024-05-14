@@ -5,32 +5,50 @@
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
     app:cardCornerRadius="8dp"
-    app:cardElevation="4dp"
-    android:background="?attr/taskItemBackground">
-    <LinearLayout
+    app:cardElevation="4dp">
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:padding="16dp"
-        android:gravity="center_vertical">
-
-        <TextView
-            android:id="@+id/taskTitle"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="18sp"
-            android:textColor="?attr/taskItemText"
-            android:text="Task Title" />
-
+        android:background="?attr/taskItemBackground">
         <Button
             android:id="@+id/completeButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Complete"
             android:focusable="false"
-            android:visibility="gone"/> <!-- This button is hidden initially and will be shown programmatically based on task completion status -->
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone" /> <!-- This button is hidden initially and will be shown programmatically based on task completion status -->
 
-    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/textContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/completeButton"
+            android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/taskTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="?attr/taskItemText"
+                android:text="Task Title" />
+
+            <TextView
+                android:id="@+id/taskDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:fontFamily="@font/ubuntusans_thin"
+                android:textColor="?attr/taskItemText"
+                android:layout_marginTop="4dp"
+                android:text="Task Description" />
+        </LinearLayout>
+
+    </RelativeLayout>
 </com.google.android.material.card.MaterialCardView>

@@ -34,12 +34,14 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         public TextView taskTitle;
+        public TextView taskDescription; // Added a TextView for the description
         public Button completeButton;
 
         public ViewHolder(View itemView) {
             super(itemView);
 
             taskTitle = itemView.findViewById(R.id.taskTitle);
+            taskDescription = itemView.findViewById(R.id.taskDescription); // Initialize the description TextView
             completeButton = itemView.findViewById(R.id.completeButton);
 
             completeButton.setOnClickListener(v -> {
@@ -62,15 +64,11 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
                 return true; // indicates the callback consumed the long click
             });
 
-
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    int position = getAdapterPosition();
-                    if (position != RecyclerView.NO_POSITION) {
-                        Task task = mTasks.get(position);
-                        mListener.onTaskClick(task);
-                    }
+            itemView.setOnClickListener(v -> {
+                int position = getAdapterPosition();
+                if (position != RecyclerView.NO_POSITION) {
+                    Task task = mTasks.get(position);
+                    mListener.onTaskClick(task);
                 }
             });
         }
@@ -89,29 +87,26 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
     public void onBindViewHolder(TaskAdapter.ViewHolder viewHolder, int position) {
         Task task = mTasks.get(position);
 
-        TextView textView = viewHolder.taskTitle;
-        textView.setText(task.getTitle());
+        viewHolder.taskTitle.setText(task.getTitle());
+        // Set the description text to the first line of the description or the entire description if it does not contain new lines.
+        String description = task.getDescription();
+        viewHolder.taskDescription.setText(description.contains("\n") ? description.substring(0, description.indexOf("\n")) : description);
 
-        Button button = viewHolder.completeButton;
-        if (task.isCompleted()) {
-            button.setVisibility(View.GONE);
-        } else {
-            button.setVisibility(View.VISIBLE);
-        }
+        viewHolder.completeButton.setVisibility(task.isCompleted() ? View.GONE : View.VISIBLE);
     }
 
     @Override
     public int getItemCount() {
         return mTasks.size();
     }
+
     public void updateTasks(List<Task> newTasks) {
         mTasks.clear();
         mTasks.addAll(newTasks);
         notifyDataSetChanged();
     }
+
     public List<Task> getCurrentList() {
         return new ArrayList<>(mTasks); // Return a copy of the current list to avoid modification issues
     }
-
-
 }

@@ -13,7 +13,7 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="tabBackground">@color/white</item>
-        <item name="taskItemBackground">@color/taskItemBackground_light</item>
+        <item name="taskItemBackground">#FFFFFF</item>
         <item name="taskItemText">@color/taskItemText_light</item>
     </style>
 </resources>
