@@ -46,7 +46,7 @@
                 android:textSize="16sp"
                 android:fontFamily="@font/ubuntusans_thin"
                 android:textColor="?attr/taskItemText"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="8dp"
                 android:text="Task Description" />
         </LinearLayout>
 
