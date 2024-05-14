@@ -10,10 +10,6 @@ public class Task {
     private Date completionDate;
     private String description;
 
-
-
-    private static final SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMMM yyyy", Locale.getDefault());
-
     public Task(String title) {
         this.title = title;
         this.isCompleted = false; // New tasks are not completed by default
@@ -21,7 +17,6 @@ public class Task {
         this.description = ""; // Initialize description as empty
     }
 
-    // Getters
     public String getTitle() {
         return title;
     }
@@ -33,19 +28,6 @@ public class Task {
     public Date getCreationDate() {
         return creationDate;
     }
-    public String getFormattedCreationDate() {
-        return dateFormat.format(creationDate);
-    }
-
-    // Get formatted completion date
-    public String getFormattedCompletionDate() {
-        if (completionDate != null) {
-            return dateFormat.format(completionDate);
-        } else {
-            return "Not completed";
-        }
-    }
-
 
     public Date getCompletionDate() {
         return completionDate;
@@ -53,11 +35,6 @@ public class Task {
 
     public boolean isCompleted() {
         return isCompleted;
-    }
-
-    // Setters
-    public void setTitle(String title) {
-        this.title = title;
     }
 
     public void setDescription(String description) {

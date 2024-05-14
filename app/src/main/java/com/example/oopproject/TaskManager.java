@@ -107,21 +107,6 @@ public class TaskManager {
         }
     }
 
-    // Get all tasks, providing an unmodifiable view of the list to prevent external modification
-    public List<Task> getAllTasks() {
-        return Collections.unmodifiableList(tasks);
-    }
-
-    // Get only completed tasks
-    public List<Task> getCompletedTasks() {
-        return getTasksByCompletionStatus(true);
-    }
-
-    // Get only active tasks
-    public List<Task> getActiveTasks() {
-        return getTasksByCompletionStatus(false);
-    }
-
     private void updateLiveDatas() {
         List<Task> activeTasks = new ArrayList<>();
         List<Task> completedTasks = new ArrayList<>();
@@ -140,16 +125,6 @@ public class TaskManager {
         activeTasksLiveData.postValue(activeTasks);
     }
 
-    // Utility method to filter tasks by completion status
-    private List<Task> getTasksByCompletionStatus(boolean isCompleted) {
-        List<Task> filteredTasks = new ArrayList<>();
-        for (Task task : tasks) {
-            if (task.isCompleted() == isCompleted) {
-                filteredTasks.add(task);
-            }
-        }
-        return filteredTasks;
-    }
     public synchronized void UpdateLiveDatas() {
         updateLiveDatas();
     }

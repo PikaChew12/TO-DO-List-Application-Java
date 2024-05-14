@@ -22,6 +22,7 @@ import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+import java.util.stream.Collectors;
 
 public class TasksFragment extends Fragment implements TaskAdapter.OnTaskClickListener, TaskAdapter.OnTaskLongClickListener {
 
@@ -129,11 +130,16 @@ public class TasksFragment extends Fragment implements TaskAdapter.OnTaskClickLi
     }
 
     private void sortTasksByDate() {
-        List<Task> modifiableList = new ArrayList<>(taskAdapter.getCurrentList()); // Use the current list from adapter
-        Collections.sort(modifiableList, (task1, task2) -> {
-            Date date1 = task1.getCreationDate();
-            Date date2 = task2.getCreationDate();
-            return date1.compareTo(date2);
+        List<Task> modifiableList = new ArrayList<>(taskAdapter.getCurrentList()); // Copy current list from adapter
+        // Sort tasks in descending order by date (newest first)
+        Collections.sort(modifiableList, new Comparator<Task>() {
+            @Override
+            public int compare(Task task1, Task task2) {
+                Date date1 = task1.getCreationDate();
+                Date date2 = task2.getCreationDate();
+                // Reverse the order here by switching task1 and task2
+                return date2.compareTo(date1);
+            }
         });
         taskAdapter.updateTasks(modifiableList);
         taskAdapter.notifyDataSetChanged();

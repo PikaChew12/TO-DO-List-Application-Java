@@ -101,12 +101,17 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
     }
 
     public void updateTasks(List<Task> newTasks) {
+        System.out.println("Updating tasks. New size: " + newTasks.size());
+        for (Task task : newTasks) {
+            System.out.println("Task: " + task.getTitle() + ", Date: " + task.getCreationDate());
+        }
         mTasks.clear();
         mTasks.addAll(newTasks);
         notifyDataSetChanged();
     }
 
     public List<Task> getCurrentList() {
+        System.out.println("Getting current list. Size: " + mTasks.size());
         return new ArrayList<>(mTasks); // Return a copy of the current list to avoid modification issues
     }
 }
