@@ -3,9 +3,74 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <style name="CustomTextStyle" parent="TextAppearance.AppCompat">
-        <item name="android:textSize">24sp</item> <!-- Bigger text size as you requested -->
-        <item name="android:textColor">?attr/colorOnBackground</item> <!-- Black color text -->
-        <item name="fontFamily">@font/montserrat_regular</item> <!-- Using Montserrat font -->
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
+        <item name="fontFamily">@font/montserrat_regular</item>
     </style>
 
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Customize your theme here -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
+        <item name="android:background">?attr/colorBackground</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="midnight_dusk" parent="AppTheme">
+        <item name="colorPrimary">@color/midnight_dusk_red</item>
+        <item name="android:textColor">@color/midnight_dusk_text</item>
+        <item name="taskItemBackground">@color/midnight_dusk_red</item>
+        <item name="taskItemText">@color/midnight_dusk_text</item>
+        <item name="tabBackground">@color/midnight_dusk_red</item>
+        <item name="viewPagerBackground">@color/midnight_dusk_bg</item>
+    </style>
+
+    <style name="tidal_wave" parent="AppTheme">
+        <item name="colorPrimary">@color/tidal_wave_blue</item>
+        <item name="android:textColor">@color/tidal_wave_text</item>
+        <item name="taskItemBackground">@color/tidal_wave_blue</item>
+        <item name="taskItemText">@color/midnight_dusk_text</item>
+        <item name="tabBackground">@color/tidal_wave_blue</item>
+        <item name="viewPagerBackground">@color/tidal_wave_bg</item>
+    </style>
+    <!-- Define Theme3 -->
+    <style name="teal_and_turquoise" parent="AppTheme">
+        <item name="colorPrimary">@color/teal_and_turquoise_blue</item>
+        <item name="android:textColor">@color/teal_and_turquoise_text</item>
+        <item name="taskItemBackground">@color/teal_and_turquoise_blue</item>
+        <item name="taskItemText">@color/midnight_dusk_text</item>
+        <item name="tabBackground">@color/teal_and_turquoise_blue</item>
+        <item name="viewPagerBackground">@color/teal_and_turquoise_bg</item>
+    </style>
+
+    <style name="tako" parent="AppTheme">
+        <item name="colorPrimary">@color/tako</item>
+        <item name="android:textColor">@color/tako_text</item>
+        <item name="taskItemBackground">@color/tako</item>
+        <item name="taskItemText">@color/midnight_dusk_text</item>
+        <item name="tabBackground">@color/tako</item>
+        <item name="viewPagerBackground">@color/tako_bg</item>
+    </style>
+
+    <style name="strawberry_daiquiri" parent="AppTheme">
+        <item name="colorPrimary">@color/strawberry_daiquiri</item>
+        <item name="android:textColor">@color/strawberry_daiquiri_text</item>
+        <item name="taskItemBackground">@color/strawberry_daiquiri</item>
+        <item name="taskItemText">@color/midnight_dusk_text</item>
+        <item name="tabBackground">@color/strawberry_daiquiri</item>
+        <item name="viewPagerBackground">@color/strawberry_daiquiri_bg</item>
+    </style>
+
+    <style name="lavender" parent="AppTheme">
+        <item name="colorPrimary">@color/lavender_purple</item>
+        <item name="android:windowBackground">@color/lavender_purple</item>
+        <item name="android:textColor">@color/lavender_text</item>
+        <item name="taskItemBackground">@color/lavender_purple</item>
+        <item name="taskItemText">@color/midnight_dusk_text</item>
+        <item name="tabBackground">@color/lavender_purple</item>
+        <item name="viewPagerBackground">@color/lavender_bg</item>
+    </style>
 </resources>
