@@ -21,7 +21,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginBottom="16dp"
+            app:backgroundTint="?attr/fabBackground"/>
 
         <!-- AppBarLayout constrained to the top of the parent -->
         <androidx.appcompat.widget.Toolbar

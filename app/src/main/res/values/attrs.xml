@@ -6,4 +6,5 @@
     <attr name="taskItemBackground" format="reference|color"/>
     <attr name="taskItemText" format="reference|color"/>
     <attr name="colorBackground" format="reference"/>
+    <attr name="fabBackground" format="reference|color"/>
 </resources>
