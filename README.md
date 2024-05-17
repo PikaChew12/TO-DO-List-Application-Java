@@ -8,3 +8,4 @@ Creating tasks with descriptions
 sorting by date feature
 dark and light mode
 Basic, comfortable UI
+Creates .json files to store the task details
