@@ -21,7 +21,7 @@
 
     <style name="midnight_dusk" parent="AppTheme">
         <item name="colorPrimary">@color/midnight_dusk_red</item>
-        <item name="android:textColor">@color/midnight_dusk_text</item>
+        <item name="android:textColor">@color/black</item>
         <item name="taskItemBackground">@color/midnight_dusk_red</item>
         <item name="taskItemText">@color/midnight_dusk_text</item>
         <item name="tabBackground">@color/midnight_dusk_red</item>
@@ -31,7 +31,7 @@
 
     <style name="tidal_wave" parent="AppTheme">
         <item name="colorPrimary">@color/tidal_wave_blue</item>
-        <item name="android:textColor">@color/tidal_wave_text</item>
+        <item name="android:textColor">@color/black</item>
         <item name="taskItemBackground">@color/tidal_wave_blue</item>
         <item name="taskItemText">@color/midnight_dusk_text</item>
         <item name="tabBackground">@color/tidal_wave_blue</item>
@@ -41,7 +41,7 @@
     <!-- Define Theme3 -->
     <style name="teal_and_turquoise" parent="AppTheme">
         <item name="colorPrimary">@color/teal_and_turquoise_blue</item>
-        <item name="android:textColor">@color/teal_and_turquoise_text</item>
+        <item name="android:textColor">@color/black</item>
         <item name="taskItemBackground">@color/teal_and_turquoise_blue</item>
         <item name="taskItemText">@color/midnight_dusk_text</item>
         <item name="tabBackground">@color/teal_and_turquoise_blue</item>
@@ -51,7 +51,7 @@
 
     <style name="tako" parent="AppTheme">
         <item name="colorPrimary">@color/tako</item>
-        <item name="android:textColor">@color/tako_text</item>
+        <item name="android:textColor">@color/black</item>
         <item name="taskItemBackground">@color/tako</item>
         <item name="taskItemText">@color/midnight_dusk_text</item>
         <item name="tabBackground">@color/tako</item>
@@ -61,7 +61,7 @@
 
     <style name="strawberry_daiquiri" parent="AppTheme">
         <item name="colorPrimary">@color/strawberry_daiquiri</item>
-        <item name="android:textColor">@color/strawberry_daiquiri_text</item>
+        <item name="android:textColor">@color/black</item>
         <item name="taskItemBackground">@color/strawberry_daiquiri</item>
         <item name="taskItemText">@color/midnight_dusk_text</item>
         <item name="tabBackground">@color/strawberry_daiquiri</item>
@@ -72,7 +72,7 @@
     <style name="lavender" parent="AppTheme">
         <item name="colorPrimary">@color/lavender_purple</item>
         <item name="android:windowBackground">@color/lavender_purple</item>
-        <item name="android:textColor">@color/lavender_text</item>
+        <item name="android:textColor">@color/black</item>
         <item name="taskItemBackground">@color/lavender_purple</item>
         <item name="taskItemText">@color/midnight_dusk_text</item>
         <item name="tabBackground">@color/lavender_purple</item>
