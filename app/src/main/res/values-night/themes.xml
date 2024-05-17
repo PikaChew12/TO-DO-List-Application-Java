@@ -15,6 +15,6 @@
         <item name="windowNoTitle">true</item>
         <item name="backgroundColor">@color/background_color_light</item>
         <item name="taskItemText">@color/taskItemText_light</item>
-        <item name="taskItemBackground">@color/lightblue</item>
+        <item name="taskItemBackground">@color/bright_blue</item>
     </style>
 </resources>

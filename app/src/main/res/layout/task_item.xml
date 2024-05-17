@@ -35,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:fontFamily="@font/montserrat_regular"
+                android:fontFamily="@font/montserrat_bold"
                 android:textColor="?attr/taskItemText"
                 android:text="Task Title" />
 
