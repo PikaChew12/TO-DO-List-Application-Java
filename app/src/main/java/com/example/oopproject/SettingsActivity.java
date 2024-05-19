@@ -1,6 +1,5 @@
 package com.example.oopproject;
 
-import android.content.SharedPreferences; // Import for SharedPreferences
 import android.os.Bundle; // Import for Bundle
 import android.view.View; // Import for View
 import android.widget.AdapterView; // Import for AdapterView
@@ -8,6 +7,7 @@ import android.widget.ArrayAdapter; // Import for ArrayAdapter
 import android.widget.Spinner; // Import for Spinner
 import android.widget.Toast; // Import for Toast
 import androidx.appcompat.app.AppCompatActivity; // Import for AppCompatActivity
+import android.content.Context;
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -31,8 +31,8 @@ public class SettingsActivity extends AppCompatActivity {
 
         // Set up the Spinner for theme selection
         themeSpinner = findViewById(R.id.theme_spinner);
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, themes);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.spinner_item, themes);
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
         themeSpinner.setAdapter(adapter);
         themeSpinner.setSelection(currentThemeIndex);
 
@@ -45,8 +45,10 @@ public class SettingsActivity extends AppCompatActivity {
                     // Save the new theme selection
                     ThemeUtil.setSelectedTheme(SettingsActivity.this, position);
                     currentThemeIndex = position;
+                    recreate();
                     // Notify the user to restart the app for changes to take effect
                     notifyUserToRestart();
+
                 }
             }
 

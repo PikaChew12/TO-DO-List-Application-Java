@@ -80,11 +80,6 @@ public class TaskManager {
         return file; // Return file
     }
 
-    // Get LiveData for all tasks
-    public LiveData<List<Task>> getAllTasksLiveData() {
-        return allTasksLiveData;
-    }
-
     // Get LiveData for completed tasks
     public LiveData<List<Task>> getCompletedTasksLiveData() {
         return completedTasksLiveData;
