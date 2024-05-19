@@ -1,6 +1,11 @@
 package com.example.oopproject;
 
+import android.content.ComponentName;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle; // Import for Bundle
+import android.os.Handler;
+import android.os.Looper;
 import android.view.View; // Import for View
 import android.widget.AdapterView; // Import for AdapterView
 import android.widget.ArrayAdapter; // Import for ArrayAdapter
@@ -13,7 +18,9 @@ public class SettingsActivity extends AppCompatActivity {
 
     // Array of theme names
     private static final String[] themes = {
+
             "Midnight Dusk", "Tidal Wave", "Teal and Turquoise", "Tako", "Strawberry Daiquiri", "Lavender"
+
     };
 
     private Spinner themeSpinner; // Spinner for theme selection
@@ -45,10 +52,19 @@ public class SettingsActivity extends AppCompatActivity {
                     // Save the new theme selection
                     ThemeUtil.setSelectedTheme(SettingsActivity.this, position);
                     currentThemeIndex = position;
-                    recreate();
-                    // Notify the user to restart the app for changes to take effect
-                    notifyUserToRestart();
-
+                    Context context = getApplicationContext();
+                    PackageManager packageManager = context.getPackageManager();
+                    Intent intent = packageManager.getLaunchIntentForPackage(context.getPackageName());
+                    ComponentName componentName = intent.getComponent();
+                    Intent mainIntent = Intent.makeRestartActivityTask(componentName);
+                    final Handler handler = new Handler(Looper.getMainLooper());
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            context.startActivity(mainIntent);
+                            Runtime.getRuntime().exit(0);
+                        }
+                    }, 100);
                 }
             }
 
@@ -57,10 +73,5 @@ public class SettingsActivity extends AppCompatActivity {
                 // Do nothing if no theme is selected
             }
         });
-    }
-
-    // Show a Toast message to notify the user to restart the app
-    private void notifyUserToRestart() {
-        Toast.makeText(this, "Restart the app for the changes to occur.", Toast.LENGTH_LONG).show();
     }
 }
