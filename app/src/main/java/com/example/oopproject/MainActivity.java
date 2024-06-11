@@ -121,8 +121,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Show the dialog
         AlertDialog dialog = builder.show();
-        dialog.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(ContextCompat.getColor(this, R.color.tako_text));
-        dialog.getButton(DialogInterface.BUTTON_NEGATIVE).setTextColor(ContextCompat.getColor(this, R.color.tako_text));
+
     }
 
     private EditText createEditText(String hint) {

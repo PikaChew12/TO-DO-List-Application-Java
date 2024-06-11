@@ -37,6 +37,15 @@
     <color name="lavender_bg">#11112A</color>
     <color name="lavender_text">#FFFFFF</color>
 
+    <color name="yin_and_yang_bg">#1E1E1E</color>
+    <color name="yin_and_yang_white">#717171</color>
+    <color name="yin_and_yang_black">#000000</color>
+    <color name="yin_and_yang_text">#FFFFFF</color>
+
+    <color name="green_apple_green">#77DC8E</color>
+    <color name="green_apple_bg">#191C19</color>
+    <color name="green_and_apple">#FFFFFF</color>
+
     <color name="colorPrimary">#FFFFFF</color>
     <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#ADD8E6</color>

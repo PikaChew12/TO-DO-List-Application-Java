@@ -17,7 +17,8 @@
             android:id="@+id/completeButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Complete"
+            android:backgroundTint="?attr/taskitembuttonbg"
+            android:text="@string/complete"
             android:focusable="false"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
@@ -38,7 +39,7 @@
                 android:textStyle="bold"
                 android:fontFamily="@font/montserrat_bold"
                 android:textColor="?attr/taskItemText"
-                android:text="Task Title" />
+                android:text="@string/task_title" />
 
             <TextView
                 android:id="@+id/taskDescription"
@@ -48,7 +49,7 @@
                 android:fontFamily="@font/ubuntusans_thin"
                 android:textColor="?attr/taskItemText"
                 android:layout_marginTop="8dp"
-                android:text="Task Description" />
+                android:text="@string/task_description" />
         </LinearLayout>
 
     </RelativeLayout>

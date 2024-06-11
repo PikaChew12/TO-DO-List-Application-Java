@@ -7,4 +7,6 @@
     <attr name="taskItemText" format="reference|color"/>
     <attr name="colorBackground" format="reference"/>
     <attr name="fabBackground" format="reference|color"/>
+    <attr name="buttoncolor" format="color"/>
+    <attr name="taskitembuttonbg" format="color"/>
 </resources>

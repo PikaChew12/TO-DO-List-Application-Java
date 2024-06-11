@@ -4,22 +4,21 @@ import android.content.ComponentName;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle; // Import for Bundle
-import android.os.Handler;
-import android.os.Looper;
+import android.os.Handler; //import for handler
+import android.os.Looper; //import for looper
 import android.view.View; // Import for View
 import android.widget.AdapterView; // Import for AdapterView
 import android.widget.ArrayAdapter; // Import for ArrayAdapter
 import android.widget.Spinner; // Import for Spinner
-import android.widget.Toast; // Import for Toast
 import androidx.appcompat.app.AppCompatActivity; // Import for AppCompatActivity
-import android.content.Context;
+import android.content.Context; //import for context
 
 public class SettingsActivity extends AppCompatActivity {
 
     // Array of theme names
     private static final String[] themes = {
 
-            "Midnight Dusk", "Tidal Wave", "Teal and Turquoise", "Tako", "Strawberry Daiquiri", "Lavender"
+            "Midnight Dusk", "Tidal Wave", "Teal and Turquoise", "Tako", "Strawberry Daiquiri", "Lavender", "Green Apple"
 
     };
 
@@ -52,12 +51,15 @@ public class SettingsActivity extends AppCompatActivity {
                     // Save the new theme selection
                     ThemeUtil.setSelectedTheme(SettingsActivity.this, position);
                     currentThemeIndex = position;
+                    //relaunch app to apply new theme
                     Context context = getApplicationContext();
                     PackageManager packageManager = context.getPackageManager();
                     Intent intent = packageManager.getLaunchIntentForPackage(context.getPackageName());
                     ComponentName componentName = intent.getComponent();
                     Intent mainIntent = Intent.makeRestartActivityTask(componentName);
                     final Handler handler = new Handler(Looper.getMainLooper());
+                    // Wait for 100 milliseconds before relaunching the app
+                    // this ensures the theme is first applied then the app relaunches
                     handler.postDelayed(new Runnable() {
                         @Override
                         public void run() {

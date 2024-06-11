@@ -43,6 +43,10 @@ public class ThemeUtil {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO); // Disable night mode
                 activity.setTheme(R.style.lavender); // Apply lavender theme
                 break;
+            case 6:
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO); // Disable night mode
+                activity.setTheme(R.style.green_apple); // Apply green apple theme
+                break;
             default:
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO); // Disable night mode
                 activity.setTheme(R.style.AppTheme); // Apply default AppTheme

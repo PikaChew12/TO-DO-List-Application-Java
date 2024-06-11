@@ -29,6 +29,7 @@
         <item name="viewPagerBackground">@color/midnight_dusk_bg</item>
         <item name="fabBackground">#EF2375</item>
         <item name="backgroundColor">@color/midnight_dusk_red</item>
+        <item name="taskitembuttonbg">@color/midnight_dusk_bg</item>
     </style>
 
     <style name="tidal_wave" parent="AppTheme">
@@ -40,6 +41,7 @@
         <item name="viewPagerBackground">@color/tidal_wave_bg</item>
         <item name="fabBackground">#5FD3FF</item>
         <item name="backgroundColor">@color/tidal_wave_blue</item>
+        <item name="taskitembuttonbg">@color/tidal_wave_bg</item>
     </style>
     <!-- Define Theme3 -->
     <style name="teal_and_turquoise" parent="AppTheme">
@@ -49,8 +51,9 @@
         <item name="taskItemText">@color/midnight_dusk_text</item>
         <item name="tabBackground">@color/teal_and_turquoise_blue</item>
         <item name="viewPagerBackground">@color/teal_and_turquoise_bg</item>
-        <item name="fabBackground">#41DFCE</item>
+        <item name="fabBackground">#BA2230</item>
         <item name="backgroundColor">@color/teal_and_turquoise_blue</item>
+        <item name="taskitembuttonbg">@color/teal_and_turquoise_blue</item>
     </style>
 
     <style name="tako" parent="AppTheme">
@@ -62,6 +65,7 @@
         <item name="viewPagerBackground">@color/tako_bg</item>
         <item name="fabBackground">#F3B375</item>
         <item name="backgroundColor">@color/tako</item>
+        <item name="taskitembuttonbg">@color/tako_bg</item>
     </style>
 
     <style name="strawberry_daiquiri" parent="AppTheme">
@@ -73,6 +77,7 @@
         <item name="viewPagerBackground">@color/strawberry_daiquiri_bg</item>
         <item name="fabBackground">#FFB2BA</item>
         <item name="backgroundColor">@color/strawberry_daiquiri</item>
+        <item name="taskitembuttonbg">@color/strawberry_daiquiri_bg</item>
     </style>
 
     <style name="lavender" parent="AppTheme">
@@ -85,5 +90,19 @@
         <item name="viewPagerBackground">@color/lavender_bg</item>
         <item name="fabBackground">#A177FF</item>
         <item name="backgroundColor">@color/lavender_purple</item>
+        <item name="taskitembuttonbg">@color/lavender_bg</item>
+    </style>
+
+    <style name="green_apple" parent="AppTheme">
+        <item name="colorPrimary">@color/green_apple_green</item>
+        <item name="android:windowBackground">@color/green_apple_green</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="taskItemBackground">@color/green_apple_green</item>
+        <item name="taskItemText">@color/midnight_dusk_text</item>
+        <item name="tabBackground">@color/green_apple_green</item>
+        <item name="viewPagerBackground">@color/green_apple_bg</item>
+        <item name="fabBackground">#A177FF</item>
+        <item name="backgroundColor">@color/green_apple_green</item>
+        <item name="taskitembuttonbg">@color/green_apple_bg</item>
     </style>
 </resources>
