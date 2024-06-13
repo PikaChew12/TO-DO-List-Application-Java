@@ -5,6 +5,16 @@ import android.content.Context; // Import for Context
 import android.content.SharedPreferences; // Import for SharedPreferences
 import androidx.appcompat.app.AppCompatDelegate; // Import for AppCompatDelegate
 
+/*This class provides utility methods for managing and applying themes in the application.
+It uses SharedPreferences to store and retrieve the selected theme index.
+The applyTheme methods set the appropriate theme for an activity based on the saved theme index.
+The setSelectedTheme method saves the selected theme index to SharedPreferences, and the
+getSelectedTheme method retrieves the currently selected theme index.
+The class supports multiple predefined themes and ensures that the appropriate theme is applied when
+an activity is created or resumed.
+ */
+
+
 public class ThemeUtil {
     private static final String PREFS_NAME = "AppSettingsPrefs"; // SharedPreferences file name
     private static final String KEY_SELECTED_THEME = "SelectedTheme"; // Key for storing selected theme

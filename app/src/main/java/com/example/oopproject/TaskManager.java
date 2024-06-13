@@ -17,6 +17,15 @@ import java.util.ArrayList; // Resizable array implementation of the List interf
 import java.util.Collections; // Utility class for collection operations
 import java.util.List; // Interface for a collection which can contain duplicate elements
 
+/*This class manages the tasks in the application,
+implementing a singleton pattern to ensure a single instance is used throughout the app.
+It maintains a list of tasks and provides LiveData for observing changes to the task list.
+The class includes methods to add, remove, and mark tasks as completed.
+It also handles the serialization and deserialization of tasks to and from a JSON file using the Gson library.
+The tasks list is thread-safe, and the class updates LiveData objects whenever the task list changes.
+ */
+
+
 public class TaskManager {
     private static TaskManager instance; // Singleton instance
     private final List<Task> tasks; // List to hold all tasks

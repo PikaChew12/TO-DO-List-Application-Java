@@ -20,6 +20,14 @@ import android.text.InputType; // Import for InputType
 import android.widget.LinearLayout; // Import for LinearLayout
 import androidx.appcompat.widget.Toolbar; // Import for Toolbar
 
+/*This class serves as the main activity for the application.
+ It sets up the user interface elements including the toolbar, navigation drawer,
+ ViewPager2 for swiping between tabs, and a FloatingActionButton for adding new tasks.
+ The class handles the initialization and configuration of these components, interactions such as opening settings,
+ adding new tasks through a dialog, and refreshing the list of active tasks.
+  It also applies the selected theme during the creation and resumption of the activity.
+ */
+
 public class MainActivity extends AppCompatActivity {
 
     private ViewPager2 viewPager; // ViewPager2 for swiping between pages

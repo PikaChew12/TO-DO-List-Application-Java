@@ -24,6 +24,16 @@ import java.util.Date; // Represents a specific instant in time, with millisecon
 import java.util.List; // Interface for a collection which can contain duplicate elements
 import java.util.Locale; // A class that represents a specific geographical, political, or cultural region
 
+/*This class represents a fragment that displays a list of tasks, either active or completed.
+It uses a RecyclerView with a TaskAdapter to display the tasks.
+The fragment includes methods to observe changes in task data,
+update the task list, handle task click and long-click events,
+show task details in a dialog, create an options menu, and sort tasks by creation date.
+The fragment is instantiated with a flag indicating whether to show completed tasks,
+and it sets up LiveData observers to update the task list when data changes.
+ */
+
+
 public class TasksFragment extends Fragment implements TaskAdapter.OnTaskClickListener, TaskAdapter.OnTaskLongClickListener {
 
     private boolean showCompleted; // Flag to indicate whether to show completed tasks

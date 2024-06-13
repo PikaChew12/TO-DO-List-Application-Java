@@ -5,6 +5,16 @@ import androidx.fragment.app.FragmentManager; // Class for interacting with frag
 import androidx.lifecycle.Lifecycle; // Lifecycle class to represent the lifecycle of an object
 import androidx.viewpager2.adapter.FragmentStateAdapter; // Adapter to provide fragments for ViewPager2
 
+/*This class is an adapter for ViewPager2 that manages the fragments for
+displaying active and completed tasks.
+It uses an enum to define the positions of the tabs. The adapter creates the appropriate fragment
+for each tab based on its position.
+It overrides methods to provide the fragment, determine the number of items,
+check for item validity, and assign a unique ID to each fragment.
+The adapter is initialized with a FragmentManager and a Lifecycle.
+ */
+
+
 public class TasksPagerAdapter extends FragmentStateAdapter {
 
     // Define an enum to manage tab positions

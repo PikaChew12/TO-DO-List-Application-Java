@@ -11,6 +11,14 @@ import androidx.recyclerview.widget.RecyclerView; // Import RecyclerView for dis
 import java.util.ArrayList; // Import ArrayList for list operations
 import java.util.List; // Import List for list operations
 
+/*This class is an adapter for a RecyclerView that displays a list of tasks.
+It manages the creation and binding of view holders, which represent each task item.
+The adapter handles user interactions such as clicking and long-clicking on tasks, as well as marking tasks as completed.
+It provides methods to update the task list and retrieve the current list of tasks.
+The adapter interfaces include OnTaskClickListener and OnTaskLongClickListener for handling task click events.
+ */
+
+
 public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
 
     private List<Task> mTasks; // List of tasks

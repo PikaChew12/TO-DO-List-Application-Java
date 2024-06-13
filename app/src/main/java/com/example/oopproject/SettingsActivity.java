@@ -13,6 +13,13 @@ import android.widget.Spinner; // Import for Spinner
 import androidx.appcompat.app.AppCompatActivity; // Import for AppCompatActivity
 import android.content.Context; //import for context
 
+/*This class is responsible for handling the settings of the application, specifically the theme selection.
+ It sets up a Spinner for selecting different themes from a predefined array.
+ When a new theme is selected, it saves the selection, updates the current theme index, and relaunches the app to apply the new theme.
+ The class also ensures the selected theme is applied when the activity is created.
+ */
+
+
 public class SettingsActivity extends AppCompatActivity {
 
     // Array of theme names
